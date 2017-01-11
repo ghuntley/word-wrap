@@ -79,7 +79,7 @@ $(function() {
 
     chrome.extension.onRequest.addListener(
         function(request, sender, sendResponse) {
-            if (request.wrapText === true) {
+            if ((request.wrapText === true) && (editable !== null)) {
                 var original = editable.val();
                 var softWrapped = wordwrap.soft(80)(original);
 
