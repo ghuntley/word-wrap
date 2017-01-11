@@ -72,7 +72,7 @@ $(function() {
     // end - https://github.com/substack/node-wordwrap/blob/24e58243d6026f6340bb6e5c24f191b48c20c974/index.js
 
     var editable = null;
-    $("textarea").mousedown(function() {
+    $(document).on('mousedown', 'textarea', function() {
         // Capture the editable element
         editable = $(this);
     });
